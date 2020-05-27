@@ -6,3 +6,4 @@
 <h5>We will try to my best. </h5>
 <h5>Finally we got success to Host our site!! </h5>
 <h6>We have automate the Ansible Job..</h6>
+<h7> job has been deployed on kubernets master and nodes<h7>
