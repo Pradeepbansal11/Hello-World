@@ -12,7 +12,7 @@ pipeline{
         stage("Maven Package"){
             steps{
                 sh "mvn clean package"
-                sh "mv target/*.war target/myweb.war"
+                sh "mv /var/lib/jenkins/workspace/declarative_demo/webapp/target/*.war /var/lib/jenkins/workspace/declarative_demo/webapp/target/webapp/myweb.war"
             }
         }
         stage("Deploy Dev"){
