@@ -12,11 +12,12 @@ pipeline{
         stage("maven Build"){
             steps{
                 sh 'mvn clean package'
-                sh 'mv /var/lib/jenkins/workspace/First_pipeline/webapp/target/*.war /var/lib/jenkins/workspace/First_pipeline/webapp/target/webapp.war
+                sh 'mv /var/lib/jenkins/workspace/First_pipeline/webapp/target/*.war /var/lib/jenkins/workspace/First_pipeline/webapp/target/webapp.war'
             }
         }
         stage("Deploy_build"){
-            sshagent(['tomcat-dev']) {
+            steps{
+                sshagent(['tomcat-dev']) {
                 sh """
                 scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/First_pipeline/webapp/target/webapp.war ec2-user@100.25.183.59:/opt
                 
@@ -25,7 +26,8 @@ pipeline{
                 ssh ec2-user@100.25.183.59/root/tomcat8/bin/startup.sh
                 
                 """
-           }
+              }
+            }
         }
     }
 }
