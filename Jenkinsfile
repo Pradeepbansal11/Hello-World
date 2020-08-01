@@ -2,7 +2,7 @@ pipeline{
     agent any
     stages{
         stage("Welcome Kit"){
-            stpes{
+            steps{
                 sh "Welcome to the Jenkins world"
             }
         }
