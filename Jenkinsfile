@@ -1,9 +1,9 @@
 pipeline{
     agent any
     stages{
-        stage("Git checkout"){
+        stage("Welcome Kit"){
             stpes{
-                git credentialsId: 'jenkins', url: 'https://github.com/Pradeepbansal11/Hello-World.git'
+                sh "Welcome to the Jenkins world"
             }
         }
     }
