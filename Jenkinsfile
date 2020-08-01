@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("Welcome Kit"){
             steps{
-                sh "Welcome to the Jenkins world"
+                echo "Welcome to the Jenkins world"
             }
         }
     }
