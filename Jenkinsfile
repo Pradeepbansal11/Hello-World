@@ -1,3 +1,4 @@
+currentBuild.displayName = "FirstPipeline-#"+currentBuild.number
 pipeline{
     agent any
     environment{
