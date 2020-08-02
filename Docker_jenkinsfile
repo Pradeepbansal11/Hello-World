@@ -1,0 +1,15 @@
+pipeline{
+  agent any
+  stages{
+    stage("Welcome-Kit"){
+      steps{
+      echo "Welcome to Docker jenkinsfile world."
+      }
+    }
+    stage("Create docker images"){
+      steps{
+      sh "docker build . -t bansalpradeep11/tomcat"
+      }
+    }
+  }
+}
