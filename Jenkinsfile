@@ -21,9 +21,9 @@ pipeline{
                 sh """
                   scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/First_pipeline/webapp/webapp.war ec2-user@100.26.18.150:/opt/webapp
                 
-                  ssh ec2-user@100.26.18.150 /root/tomcat8/bin/shutdown.sh
+                  ssh ec2-user@100.26.18.150/root/tomcat8/bin/shutdown.sh
                 
-                  ssh ec2-user@100.26.18.150 /root/tomcat8/bin/startup.sh
+                  ssh ec2-user@100.26.18.150/root/tomcat8/bin/startup.sh
                 
                 """
               }
