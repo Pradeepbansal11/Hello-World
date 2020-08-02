@@ -8,7 +8,7 @@ pipeline{
     }
     stage("Create docker images"){
       steps{
-      sh "docker build . -t bansalpradeep11/tomcat"
+      sh "docker build -t bansalpradeep11/tomcat --file Dockerfile"
       }
     }
   }
